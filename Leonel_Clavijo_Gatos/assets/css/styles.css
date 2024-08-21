@@ -1,0 +1,50 @@
+
+/* Estilo base para las imágenes */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Pantallas extragrandes */
+@media (min-width: 1200px) {
+    .gallery {
+        justify-content: space-between;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}
+
+/* Pantallas grandes, medianas y pequeñas */
+@media (max-width: 1199px) and (min-width: 576px) {
+    .gallery img {
+        width: 100%;
+    }
+
+    .gallery img:nth-child(3) {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Pantallas extrapequeñas */
+@media (max-width: 575px) {
+    .gallery img {
+        width: 100%;
+        margin: 0 0 16px 0;
+    }
+
+    .gallery img:last-child {
+        margin-bottom: 0;
+    }
+}
